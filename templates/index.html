@@ -1,0 +1,53 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <style>
+        .box {
+          border-color: black;
+          border-width: 2px;
+          border-style: solid;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="jumbotron">
+          <h1>Mood based Food Recommender</h1>
+      </div>
+      <div class="container text-center">
+        <h2 style="margin-bottom: 15px">Please Select Your Current Mood</h2>
+        <div class="card-deck">
+          <div class="card" style="padding-top: 15px; padding-bottom: 15px; cursor: pointer;" onclick="find('happy')">
+            <h1>😀</h1>
+            <h2>Happy</h2>
+          </div>
+          <div class="card" style="padding-top: 15px; padding-bottom: 15px; cursor: pointer;" onclick="find('laziness')">
+            <h1>😴</h1>
+            <h2>Laziness</h2>
+          </div>
+          <div class="card" style="padding-top: 15px; padding-bottom: 15px; cursor: pointer;" onclick="find('sad')">
+            <h1>😔</h1>
+            <h2>Sad</h2>
+          </div>
+        </div>
+        <div class="card-deck" style="margin-top: 20px">
+          <div class="card" style="padding-top: 15px; padding-bottom: 15px; cursor: pointer;" onclick="find('depressed')">
+            <h1>😞</h1>
+            <h2>Depressed</h2>
+          </div>
+          <div class="card" style="padding-top: 15px; padding-bottom: 15px; cursor: pointer;" onclick="find('hunger')">
+            <h1>🤤</h1>
+            <h2>Hungry</h2>
+          </div>
+          <div class="card" style="padding-top: 15px; padding-bottom: 15px; cursor: pointer;" onclick="find('boredom')">
+            <h1>🤔</h1>
+            <h2>Boredom</h2>
+          </div>
+        </div>
+      </div>
+      <script>
+        function find(val) {
+          window.location.href="/find?mood="+val;
+        }
+      </script>
+    </body>
+</html>
