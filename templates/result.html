@@ -4,14 +4,40 @@
   </head>
     <body>
       <div class="jumbotron">
-          <h1>Mood based Food Recommender</h1>
+        <h1>Mood based Food Recommender 🍕 🍔 🍟</h1>
       </div>
-      <div class="container">
-        <h2>Your mood is {{ mood }}. {{ result }}</h2>
-        <div class="row">
-          {% for restaurant in restaurants %}
-          <div class="col-sm-3">
-            <h1>{{ restaurant }}</h1>
+      <div class="container text-center">
+        <p style="margin-bottom: 20px">In {{ mood }} mood, here are some suggestions, you can try:</p>
+        <div class="card-deck" style="margin-bottom: 20px">
+          {% for restaurant in restaurants1 %}
+          <div class="card" style="padding-top: 15px; padding-bottom: 15px;">
+            <h5>{{ restaurant["Restaurant Name"] }}</h5>
+            <p style="font-size: 12px; color: grey">{{ restaurant["Cuisines"] }}</p>
+            <p style="font-size: 12px; color: grey; margin-top: -15px"> Avg. Cost for 2 : {{ restaurant["Average Cost for two"] }}</p>
+            <p>⭐️ {{ restaurant["Aggregate rating"] }} Rating</p>
+            <p>{{ restaurant["Address"] }}</p>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="card-deck" style="margin-bottom: 20px">
+          {% for restaurant in restaurants2 %}
+          <div class="card" style="padding-top: 15px; padding-bottom: 15px;">
+            <h5>{{ restaurant["Restaurant Name"] }}</h5>
+            <p style="font-size: 12px; color: grey">{{ restaurant["Cuisines"] }}</p>
+            <p style="font-size: 12px; color: grey; margin-top: -15px"> Avg. Cost for 2 : {{ restaurant["Average Cost for two"] }}</p>
+            <p>⭐️ {{ restaurant["Aggregate rating"] }} Rating</p>
+            <p>{{ restaurant["Address"] }}</p>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="card-deck" style="margin-bottom: 20px">
+          {% for restaurant in restaurants3 %}
+          <div class="card" style="padding-top: 15px; padding-bottom: 15px;">
+            <h5>{{ restaurant["Restaurant Name"] }}</h5>
+            <p style="font-size: 12px; color: grey">{{ restaurant["Cuisines"] }}</p>
+            <p style="font-size: 12px; color: grey; margin-top: -15px"> Avg. Cost for 2 : {{ restaurant["Average Cost for two"] }}</p>
+            <p>⭐️ {{ restaurant["Aggregate rating"] }} Rating</p>
+            <p>{{ restaurant["Address"] }}</p>
           </div>
           {% endfor %}
         </div>
